@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <!-- Nav and banner section start-->
+    <div class="nav-fixed">
+        <nav>
+            <a href="index.html">
+            <img src="logo.png">
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="About.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="course.html">COURSE</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-view" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="About.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="course.html">COURSE</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        </div>
+    <!--About section start-->
+    <section class="About-header">
+<div class="text-box about-text">
+    <h1>About  Us</h1>
+</div>
+</section>
+<!--About section end-->
+
+<!--Description start-->
+<section>
+    <div class="row">
+        <div class="description-col">
+            <img src="img/banner2.jpg" alt="">
+        </div>
+        <div class="description-col">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsam debitis, aut dolor expedita cum fuga sunt aperiam inventore accusantium quibusdam, doloremque accusamus quo magni alias quas nam ipsa eos. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga at culpa itaque dignissimos? Impedit nesciunt dignissimos maiores quia corrupti, ullam tempora. Ea omnis, fugit facere aperiam ab porro aliquam nemo!</p>
+        </div>
+    </div>
+</section>
+<!--Description end-->
+
+        <footer>
+        <div class="row">
+            <div class="footer-col">
+                <h1>Eduford</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aspernatur nihil aut laboriosam veritatis quas laudantium rem consequuntur laborum. Quasi dolore dolor labore aliquam ratione consequuntur deserunt accusamus, libero debitis!</p>
+                <div class="social-links">
+                     <a href=""><i class="fab fa-linkedin-in "></i></a>
+                     <a href=""><i class="fab fa-twitter"></i></a>
+                     <a href=""><i class="fab fa-slack"></i></a>
+                     <a href=""><i class="fab fa-facebook-f"></i></a>
+                     <a href=""><i class="fab fa-instagram"></i></a>
+
+                    </div>
+            </div>
+            <div class="footer-col">
+                <h1>Address Info</h1>
+                <p>
+                    <i class="fa fa-map-marker-alt"></i>&nbsp; &nbsp; Godwin Omuona Avenue,
+                    <br>GRA,Benin City Nigeria.
+                </p>
+                <p>
+                    <i class="fa fa-envelope"></i>&nbsp; &nbsp;atmosphcare@gmail.com
+                </p>
+                <p>
+                    <i class="fa fa-phone-alt"></i>&nbsp; &nbsp;+2348032097223
+                </p>
+            </div>
+            <div class="footer-col">
+                <h1>Quick Links</h1>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="About.html">About</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                    <li>
+                        <a href="">Course</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottoom">
+            <p>All Rights Reserved &copy;Eduford
+            <span class="current-date-year"></span>
+            </p>
+        </div>
+    </footer>
+    <!--
+    
+-->
+    <!-- js mobile nav bar start -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.display = "block";
+
+        }
+        function hideMenu(){
+            navLinks.style.display = "none";
+        }
+        //Current date for footer//
+        var date = new Date();
+        document.querySelector(".current-date-year").innerHTML =  date.getFullYear();
+    </script>
+    <!-- js mobile nav bar end -->
+</body>
+</html>

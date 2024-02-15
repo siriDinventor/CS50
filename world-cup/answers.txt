@@ -1,0 +1,18 @@
+Times:
+
+10 simulations: 0m0.027s
+100 simulations: 0m0.026s
+1000 simulations: 0m0.049s
+10000 simulations: 0m0.091s
+100000 simulations: 0m0.656s
+1000000 simulations: 0m7.007s
+
+
+Questions:
+
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+From the provided output, it seems that the predictions are somewhat consistent in terms of the teams with higher chances of winning. The percentages may vary slightly with each run, but the overall ranking of teams and their probabilities remains relatively stable. You might notice some fluctuations in the exact percentages due to the random nature of the simulations.
+
+Suppose you're charged a fee for each second of compute time your program uses.
+After how many simulations would you call the predictions "good enough"?:
+The runtime increases significantly with increase in simulation. it seems that running the simulation with around 1000 simulations provides relatively stable results, and running additional simulations has a diminishing impact on the outcome.

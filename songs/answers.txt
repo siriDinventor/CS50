@@ -1,0 +1,20 @@
+Characterizing the Audio Aura:
+
+Energy, Valence, and Danceability Calculation:
+
+Energy: Reflects the intensity and activity. Higher values indicate more energetic songs.
+Valence: Describes the musical positiveness of a track. Higher values suggest more positive and happy songs.
+Danceability: Indicates how suitable a track is for dancing. Higher values suggest more danceable songs.
+To characterize the audio aura, you would need to analyze the average values of energy, valence, and danceability for the listener's top 100 songs from 2018.
+
+Hypothesis on Representativeness:
+
+Limited Genre Representation: If the listener's top songs are predominantly from a specific genre, the calculated audio aura might be biased towards the characteristics of that genre. For example, energetic and danceable features might be more common in pop or electronic genres, while other genres may have different characteristics.
+Mood Changes: Averaging values might not capture mood changes within the playlist. A mix of high-energy and low-energy songs could result in an average that doesn't accurately represent the listener's mood.
+Influence of Individual Tracks: Some tracks might heavily influence the average, especially if they are extreme outliers in terms of energy, valence, or danceability.
+Better Ways of Calculating Audio Aura:
+
+Weighted Averages: Consider giving more weight to the songs that the listener plays more frequently. This would provide a more accurate reflection of their preferences.
+Genre-Specific Analysis: Separate the songs into genres and calculate the audio aura for each genre independently. This would give a more nuanced understanding of the listener's preferences within different musical styles.
+Temporal Analysis: Consider analyzing the audio aura over different time periods (e.g., seasons) to capture potential mood changes or preferences influenced by external factors.
+Incorporate Tempo and Instrumentation: Include additional musical features such as tempo or instrumentation to enhance the representation of the listener's musical preferences.

@@ -1,0 +1,143 @@
+/* google font */
+@import url(@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+/* nav and banner start */
+
+.header{
+	min-height: 100vh;
+	width: 100%;
+	background-image:url(../img/estatebg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+ img{
+	width: 150px;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li {
+	text-decoration-color: white;
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.nav-links ul li a{
+	text-decoration: none;
+	font-size: 20px;
+}
+.nav-links ul li::after{
+	content: " ";
+	width: 0px;
+	height:2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+	margin: 20px;
+	padding: 10px;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+
+.text{
+	width: 90%;
+	color: white;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	color: white;
+}
+.text  h1{
+	font-size: 62px;
+	text-transform: capitalize;
+	padding-top: 300px;
+	outline-color: #f44336;
+	outline-width: 20px;
+}
+.text  p{
+	padding: 10px 0 40px;
+	font-size: 20px;
+}
+.hero-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 12px ;
+	position: center;
+	font-size: 13px;
+	background-color: transparent;
+	cursor: pointer;
+}
+.hero-btn:hover{
+	border: 1px solid pink;
+	background-color: pink;
+	transition: 1s;
+
+}
+}
+.aboutus {
+	background-image: url(banner2.jpg);
+}
+.images{
+	width: 100%;
+	padding-top: 100px;
+	align-items: center;
+}
+.services {
+	position: center;
+	align-items: center;
+	margin-left: 30%;
+}
+.services> h1{
+	font-size: 50px;
+}
+.services > p{ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.roll {
+	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	justify-content: space-around;
+	justify-content: space-evenly;
+}
+.sell{
+	flex-basis: 31%;
+	padding: 20px 12px;
+	margin-bottom: 5%;
+	border-radius: 10%;
+	width: 33%;
+} 
+.sell img {
+	width: 100%;
+}
+@media (max-width:820px) {
+	.sell{
+		flex-basis: 45%;
+	}
+}	
+@media (max-width:600px) {
+	.roll{
+		flex-direction: column;
+	}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Information</title>
+    <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+            crossorigin />
+
+    <link rel ="stylesheet" href="style.css" >
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin></script>
+</head>
+<body>
+    <header>
+        <h2>IP Address Tracker</h2>
+
+        <form id="ipForm">
+            <input type="text" id="ipAddress" name="ipAddress" placeholder="Search for any IP address" required>
+            <button type="button" onclick="getIPInformation()"></button>
+        </form>
+        <div id="result"></div>
+    </header>
+
+    <div id="map"></div>
+
+
+
+    <script>
+        const map = L.map('map');
+    // Initializes map
+
+    map.setView([51.505, -0.09], 13);
+    // Sets initial coordinates and zoom level
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+    // Sets map data source and associates with map
+
+    let marker, circle, zoomed;
+
+    // navigator.geolocation.watchPosition(success, error);
+    // 6.5110016 lng:  3.3947648
+    // console.log("i dey her2 2")
+
+    let lat = 6.5110016; // this is the latitude of my location
+    let lng = 3.3947648; // this is the longitude of my location
+
+    setTimeout(function() {
+        updateMapWithLocation(lat, lng)
+    }, 10000);
+
+    function updateMapWithLocation(lat, lng) {
+        if (marker) {
+            map.removeLayer(marker);
+            map.removeLayer(circle);
+        }
+
+        // Removes any existing marker and circle (new ones about to be set)
+        marker = L.marker([lat, lng]).addTo(map);
+        circle = L.circle([lat, lng], { radius: 7000 }).addTo(map);
+
+        // Adds marker to the map and a circle for accuracy
+        if (!zoomed) {
+            zoomed = map.fitBounds(circle.getBounds());
+        }
+
+        // Set zoom to boundaries of accuracy circle
+        map.setView([lat, lng]);
+        // Set map focus to current user position
+    }
+        function getIPInformation() {
+            var ipAddress = document.getElementById("ipAddress").value;
+            var url = `https://geo.ipify.org/api/v2/country?apiKey=at_PBRIq2kJf2ezCINdJ8ourpmCWVJoC&ipAddress=${ipAddress}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Display the response on the page
+                    var resultElement = document.getElementById("result");
+                    resultElement.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Display an error message on the page
+                    var resultElement = document.getElementById("result");
+                    resultElement.innerHTML = '<p>Error fetching IP information.</p>';
+                });
+        }
+    </script>
+
+</body>
+</html>
+

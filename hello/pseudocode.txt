@@ -1,0 +1,3 @@
+get user input for height
+if height is a string or negative go back to line 1
+else print inputed number of blocks that decrease with each line
