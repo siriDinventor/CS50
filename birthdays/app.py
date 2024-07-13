@@ -19,6 +19,9 @@ class Birthday(db.Model):
     month = db.Column(db.Integer, nullable=False)
     day = db.Column(db.Integer, nullable=False)
 
+    def __repr__(self):
+        return f'<Birthday {self.name}, {self.month}/{self.day}>'
+
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
